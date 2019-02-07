@@ -12,9 +12,16 @@ import numpy as np
 
 
 def evaluation_(nn):
+	'''
+	Function that evaluates trained network
+	'''
 	pass
 
 def backpropagation():
+	'''
+	Function that executes backpropagation 
+	'''
+	
 	pass
 
 
