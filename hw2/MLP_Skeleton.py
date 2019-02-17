@@ -21,12 +21,12 @@ class LinearTransform(object):
 
     def __init__(self, W, b):
 	# DEFINE __init function
-        self.w = w
+        self.w = W
         self.b = b
 
     def forward(self, x):
 	# DEFINE forward function
-        return (np.matmul(self.w, x) + self.b)
+        return (np.dot(self.w.T, x) + self.b)
 
     def backward(
         self, 
@@ -36,7 +36,7 @@ class LinearTransform(object):
         l2_penalty=0.0,
     ):
 	# DEFINE backward function
-        return np.dot(grad_output, self.w) # not sure it is dot product
+        self.w_sum = np.zeros(self.w.shape[0], self.W.shape[1]) # 
 
 
 # ADD other operations in LinearTransform if needed
